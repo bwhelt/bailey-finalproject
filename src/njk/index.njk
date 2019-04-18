@@ -8,36 +8,58 @@
   <div class="row">
     <div class="col">
     <h1>QUEEN</h1>
-    <p class="author">By {% for author in authors %}
-      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
-      <br> Published {{ publish_date }}
-    </p>
     </div>
   </div>
+  <div class="jumbotron">
+</div>
   <div class="row">
     <div class="col">
       <p>
         Lucas ipsum dolor <a href="detail-page.html">link to detail-page.html</a> amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
       </p>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <img class= "card-img-top" src ="img/members/brian-may-bw.jpg" alt="Brian May bw">
-          <div class="card-body">
-          <p class="card-text">
-            <h3>Brian May</h3>
-          </p>
-        </div>
+       {% for entry in data.members %}
+          <h3 class="entry-headline"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+          <p class="entry-date">{{ entry.date }}</p>
+          <hr>
+        {% endfor %}
+   <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Freddie Mercury</h4>
+        <img src="img/members/freddie-mercury-bw.jpg" alt="Freddie Mercury in B&W">
+        <p class="card-text">Lead Vocals and Piano</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <img class= "card-img-top" src ="img/members/freddie-mercury-bw.jpg" alt="Freddie Mercury bw">
-          <div class="card-body">
-          <p class="card-text">
-            <h3>Freddie Mercury</h3>
-          </p>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">John Deacon</h4>
+        <img src="img/members/john-deacon-bw.jpg" alt="John Deacon in B&W">
+        <p class="card-text">Bass Guitar</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Brian May</h4>
+        <img src="img/members/brian-may-bw.jpg" alt="Brian May in B&W">
+        <p class="card-text">Lead Guitar and Vocals</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Roger Taylor</h4>
+        <img src="img/members/roger-taylor-bw.jpg" alt="Roger Taylor in B&W">
+        <p class="card-text">Drums and Vocals</p>
+      </div>
+    </div>
+  </div>
         </div>
       </div>
     </div> 
