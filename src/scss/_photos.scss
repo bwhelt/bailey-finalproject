@@ -3,13 +3,23 @@
   height: auto;
 }
 
-.card{
+.card-deck{
   max-width: 50;
   height: auto;
   border: 20rem;
 }
 
 .card-img-top{
+  max-width: 50;
+  height: auto;
+}
+
+.card-body{
+  max-width: 50;
+  height: 30rem;
+}
+
+.card-title{
   max-width: 50;
   height: auto;
 }
