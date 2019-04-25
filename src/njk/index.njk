@@ -7,42 +7,40 @@
 <div class="container">
   <div class="row">
     <div class="col">
-    <h1>QUEEN</h1>
+      <h1>QUEEN</h1>
     </div>
   </div>
+<div class="jumbotron">
 </div>
-  <div class="jumbotron">
-</div>
+<div class="container">
   <div class="row">
     <div class="col">
       <p>
         Lucas ipsum dolor <a href="detail-page.html">link to detail-page.html</a> amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
       </p>
-  <div class="card-deck">
-  {% for member in data.members %}
+    </div>
   </div>
-    <div class="card">
-      <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="{{ member.imagebw }}">
+</div>
+<div class="card-deck">
+  {% for member in data.members %}
+  <div class="card">
+    <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="{{ member.imagebw }}">
       <div class="card-body">
         <h5 class="card-title">{{ member.name }}</h5>
         <p class="card-text">{{member.instruments}}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
+  </div>
+  {% endfor %}
+</div>
+<div class="carousel-item">
+  {% for discography in data.discography %}
+    <img src="img/discs/{{ discography.image }}" alt="{{ discography.image }}">
+    <div class="carousel-caption d-none d-md-block">
+      <h5>{{ discography.title }}Hi</h5>
+      <p>{{ discography.year }}</p>
     </div>
   {% endfor %}
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    {% for discography in data.discography%}
-     <div class="carousel-inner">
-    <div class="item active">
-      <img src="img/discs/{{ discography.image }}" alt="discography.image">
-      <div class="carousel-caption">
-        <h3>{{discography.title}}</h3>
-        <p>{{discography.year}}</p>
-      </div>
-    </div>
-    {%endfor%}
-  </div>
-    </div>
-  </div>
+</div>
 </div>
 {% endblock %}
