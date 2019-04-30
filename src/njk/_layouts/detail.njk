@@ -4,14 +4,17 @@
 <article class="container">
   <div class="row">
     <div class="col-sm-4 left-rail">
-      <h1>{{ member.name }}</h1>
-      <h2>{{ member.tenure}}</h2>
-      <h5>{{ member.instruments }}</h5>
-      <p>{{ member.text }}</p>
-    </div>
-    <div class="col-sm-8">
+      <h1>{{ members.name }}</h1>
+      <h2>{{ members.tenure}}</h2>
+      <h5>{{ members.instruments }}</h5>
+      <p>{{ members.text }}</p>
     </div>
   </div>
+  
+  <div class="row" > 
+      <div class="col-sm-6 col-lg-4">
+        <img class="img-fluid" src="img/members/{{ member.image }}">
+
   </article>
 
 {% endblock %}
