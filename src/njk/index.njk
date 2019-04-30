@@ -1,0 +1,49 @@
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %}New index page title{% endblock %}
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>QUEEN</h1>
+    </div>
+  </div>
+<div class="jumbotron">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>
+        Queen, the British rock band formed in 1970 influenced rock n' roll music so much, they are one of the "world's best-selling music artists." Although Brian May and Roger Taylor knew each other from playing in a previous band, Freddie Mercury joined the duo in 1970 and John Deacon joined the band not long after. After their debut album in 1973, the band's fame only grew leading to their epic performance at Live Aid in 1985, with many calling it one of the best rock performances in history. By August 1986 however, Mercury had his last performance with the band due to health issues stemming from a complication with AIDS and later died in 1991. Deacon retired from the band in 1997, but Roger and Taylor continued to tour since 2004 under "Queen" with vocalists such as Paul Rodgers and most recently, Adam Lambert. With huge hit songs such as "Bohemian Rhapsody," "We Will Rock You," "We Are The Champions," and "Another One Bites the Dust," Queen's music will forever live on for ages to come.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="card-deck">
+  {% for member in data.members %}
+  <div class="card">
+    <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="Member Image">
+      <div class="card-body">
+        <h5 class="card-title">{{ member.name }}</h5>
+        <p class="card-text">{{member.instruments}}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+  </div>
+  {% endfor %}
+</div>
+<ul class="list-unstyled">
+  {% for discography in data.discography %}
+    <li class="media">
+    <img class="mr-3" src="img/discs/{{ discography.image }}" alt="{{ discography.image }}">
+    <div class="media body">
+      <h5 class="mt-0 mb-1">{{ discography.title }}</h5>
+      <p>{{ discography.year }}</p>
+    </div>
+    </li>
+  {% endfor %}
+</ul>
+</div>
+{% endblock %}
