@@ -2,18 +2,17 @@
 
 {% block content %}
 <article class="container">
-<div class="row">
-  <div class="col-4">
-    <img class="img-fluid" src= "img/members/{{ members.image }}">
+  <div class="row">
+    <div class="col-sm-4">
+      <img class="img-fluid" src= "img/members/{{ members.image }}">
+    </div>
+    <div class="col-sm-8">
+      <h1 style="text-align:center;">{{ members.name }}</h1>
+        <h2 style="text-align:center;">{{ members.tenure}}</h2>
+          <h5 style="text-align:center;">{{ members.instruments }}</h5>
+            <p>{{ members.text }}</p>
+    </div>
   </div>
-  <div class="col-8">
-    <h1>{{ members.name }}</h1>
-      <h2>{{ members.tenure}}</h2>
-        <h5>{{ members.instruments }}</h5>
-          <p>{{ members.text }}</p>
-  </div>
-</div>
-  
 </article>
 
 {% endblock %}
