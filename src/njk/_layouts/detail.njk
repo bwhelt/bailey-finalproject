@@ -10,7 +10,7 @@
       <h1 style="text-align:center;">{{ members.name }}</h1>
         <h2 style="text-align:center;">{{ members.tenure}}</h2>
           <h5 style="text-align:center;">{{ members.instruments }}</h5>
-            <p>{{ members.text }}</p>
+            <p>{{ members.text | safe}}</p>
     </div>
   </div>
 </article>

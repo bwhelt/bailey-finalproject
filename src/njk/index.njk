@@ -14,39 +14,41 @@
     <div class="row">
       <div class="col">
         <p style="text-align:center;">
-          Queen, the British rock band formed in 1970 influenced rock n' roll music so much, they are one of the "world's best-selling music artists." Although Brian May and Roger Taylor knew each other from playing in a previous band, Freddie Mercury joined the duo in 1970 and John Deacon joined the band not long after. After their debut album in 1973, the band's fame only grew leading to their epic performance at Live Aid in 1985, with many calling it one of the best rock performances in history. By August 1986 however, Mercury had his last performance with the band due to health issues stemming from a complication with AIDS and later died in 1991. Deacon retired from the band in 1997, but Roger and Taylor continued to tour since 2004 under "Queen" with vocalists such as Paul Rodgers and most recently, Adam Lambert. With huge hit songs such as "Bohemian Rhapsody," "We Will Rock You," "We Are The Champions," and "Another One Bites the Dust," Queen's music will forever live on for ages to come.
+          Queen, the British rock band formed in 1970 influenced rock n' roll music so much, they are one of the "world's best-selling music artists." Although Brian May and Roger Taylor knew each other from playing in a previous band, Freddie Mercury joined the duo in 1970 and John Deacon joined the band not long after. After their debut album in 1973, the band's fame only grew leading to their epic performance at Live Aid in 1985, with many calling it one of the best rock performances in history. By August 1986 however, Mercury had his last performance with the band due to health issues stemming from a complication with AIDS and later died in 1991. Deacon retired from the band in 1997, but Roger and Taylor continued to tour since 2004 under "Queen" with vocalists such as Paul Rodgers and most recently, Adam Lambert. With huge hit songs such as "Bohemian Rhapsody," "We Will Rock You," "We Are The Champions," and "Another One Bites the Dust," Queen's music will live on for ages to come.
         </p>
         <p style="text-align:center;">
-        Source: "https://en.wikipedia.org/wiki/Queen_(band)"
+          {{ "Source: https://en.wikipedia.org/wiki/Queen_(band))" | urlize | safe }}
         </p>
       </div>
     </div>
+    <h2 style="text-align:center;">Members</h2>
   <div class="card-deck">
     {% for member in data.members %}
     <div class="card">
-      <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="{{ member.slug }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ member.name }}</h5>
-          <p class="card-text">{{member.instruments}}</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+        <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="{{ member.slug }}">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{{ member.slug }}.html">{{ member.name }}</a></h5>
+            <p class="card-text">{{member.instruments}}</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
     </div>
     {% endfor %}
   </div>
+  <h2 style="text-align:center;">Studio Albums</h2>
   <div class="row">
     {% for discography in data.discography %}
     <div class="col-sm-6">
       <ul class="list-unstyled">
         <li class="media">
           <img class="mr-3" src="img/discs/{{ discography.image }}" alt="{{ discography.image }}">
-            <div class="media body">
+            <div class="media-body">
               <h5 class="mt-0 mb-1">{{ discography.title }}</h5>
-                <p class="mt-0 mb-1">Year: {{ discography.year }}</p>
+              <p class="mt-0 mb-1">Year: {{ discography.year }}</p>
             </div>
         </li>
       </ul>
     </div>
-      {% endfor %}
+    {% endfor %}
   </div>
   {% endblock %}
 </div>
